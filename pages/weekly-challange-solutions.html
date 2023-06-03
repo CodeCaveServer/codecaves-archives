@@ -1,0 +1,3294 @@
+<!--
+This transcript was generated using: https://github.com/mahtoid/DiscordChatExporterPy
+If you have any issues or suggestions - open an issue on the Github Repository or alternatively join discord.gg/2uhHBQDwcc
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Code Cave - weekly-challange-solutions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width" />
+
+    <style>
+        @font-face {
+          font-family: Ginto;
+          font-weight: 300;
+          src: url(https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/Ginto-300.woff) format("woff")
+        }
+
+        @font-face {
+          font-family: Ginto;
+          font-weight: 400;
+          src: url(https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/Ginto-400.woff) format("woff")
+        }
+
+        @font-face {
+          font-family: Ginto;
+          font-weight: 500;
+          src: url(https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/Ginto-500.woff) format("woff")
+        }
+
+        @font-face {
+          font-family: Ginto;
+          src: url(https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/Ginto-600.woff) format("woff");
+          font-weight: 600;
+        }
+
+        @font-face {
+          font-family: Ginto;
+          font-weight: 700;
+          src: url(https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/Ginto-700.woff) format("woff")
+        }
+
+        @font-face {
+          font-family: Ginto;
+          font-weight: 500;
+          src: url(https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/Ginto-Nord-500.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/Ginto-Nord-500.woff) format("woff")
+        }
+
+        @font-face {
+          font-family: Ginto;
+          font-weight: 600;
+          src: url(https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/Ginto-Nord-600.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/Ginto-Nord-600.woff) format("woff")
+        }
+
+        @font-face {
+          font-family: Ginto;
+          font-weight: 700;
+          src: url(https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/Ginto-Nord-700.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/Ginto-Nord-700.woff) format("woff")
+        }
+
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/whitney-300.woff);
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/whitney-400.woff);
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/whitney-500.woff);
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/whitney-600.woff);
+            font-weight: 600;
+        }
+
+        @font-face {
+            font-family: Whitney;
+            src: url(https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/whitney-700.woff);
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            object-fit: contain;
+        }
+
+        .chatlog__markdown {
+            max-width: 100%;
+            line-height: 1.3;
+            overflow-wrap: break-word;
+        }
+
+        .chatlog__markdown-preserve {
+            white-space: pre-wrap;
+        }
+
+        .markdown {
+            max-width: 100%;
+            line-height: 1.3;
+            overflow-wrap: break-word;
+        }
+
+        .preserve-whitespace {
+            white-space: pre-wrap;
+        }
+
+        .spoiler {
+            display: inline-block;
+        }
+
+        .spoiler--hidden {
+            cursor: pointer;
+            background-color: #202225;
+        }
+
+        .spoiler-text {
+            border-radius: 3px;
+        }
+
+        .spoiler--hidden .spoiler-text {
+            opacity: 0;
+        }
+
+        .spoiler--hidden .spoiler-text::selection {
+            color: rgba(0, 0, 0, 0);
+        }
+
+        .spoiler-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 3px;
+        }
+
+        .spoiler--hidden .spoiler-image {
+            box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .spoiler--hidden .spoiler-image * {
+            filter: blur(44px);
+        }
+
+            .spoiler--hidden .spoiler-image:after {
+                content: "SPOILER";
+                color: #dcddde;
+                background-color: rgba(0, 0, 0, 0.6);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                font-weight: 600;
+                padding: 100%;
+                border-radius: 20px;
+                letter-spacing: 0.05em;
+                font-size: 0.9em;
+            }
+
+        .spoiler--hidden:hover .spoiler-image:after {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .quote {
+            margin: 0.1em 0;
+            padding-left: 0.6em;
+            border-left: 4px solid;
+            border-radius: 3px;
+        }
+
+        .pre {
+            font-family: "Consolas", "Courier New", Courier, monospace;
+        }
+
+        .pre--multiline {
+            margin-top: 0.25em;
+            padding: 0.5em;
+            border: 2px solid;
+            border-radius: 5px;
+        }
+
+        .pre--inline {
+            padding: 2px;
+            border-radius: 3px;
+            font-size: 0.85em;
+        }
+
+        .unix-timestamp {
+            background: #40444b;
+            border-radius: 3px;
+            padding: 0 2px;
+        }
+
+        .mention {
+            border-radius: 3px;
+            padding: 0 2px;
+            color: #dee0fc;
+            background: rgba(88, 101, 242, .3);
+            font-weight: 500;
+        }
+
+        .mention:hover {
+            background: rgba(88, 101, 242, .6);
+        }
+
+        .emoji {
+            width: 1.25em;
+            height: 1.25em;
+            margin: 0 0.06em;
+            vertical-align: -0.4em;
+        }
+
+        .emoji--small {
+            width: 1em;
+            height: 1em;
+            padding-bottom: 4px;
+        }
+
+        .emoji--large {
+            width: 2.8em;
+            height: 2.8em;
+        }
+
+        /* Chatlog */
+
+        .chatlog {
+            padding: 1rem 5px 0.125rem 2px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .chatlog__followup-symbol {
+            grid-column: 1;
+            border-style: solid;
+            border-width: 2px 0 0 2px;
+            border-radius: 8px 0 0 0;
+            margin-left: 16px;
+            margin-top: 8px;
+        }
+
+        .chatlog__attachment-icon {
+            float: left;
+            height: 37px;
+            margin-right: 10px;
+        }
+
+        .chatlog__header {
+            margin-bottom: 0.1rem;
+        }
+
+        .chatlog__message-aside {
+            grid-column: 1;
+            width: 72px;
+            padding: 0.15rem 0.15rem 0 0.15rem;
+            text-align: center;
+        }
+
+        .chatlog__message:hover {
+            background-color: #32353b;
+        }
+
+        .chatlog__message:hover .chatlog__short-timestamp {
+            display: block;
+        }
+
+        .chatlog__short-timestamp {
+            display: none;
+            color: #a3a6aa;
+            font-size: 0.75rem;
+            font-weight: 500;
+            direction: ltr;
+            unicode-bidi: bidi-override;
+        }
+
+        .chatlog__message-primary {
+            grid-column: 2;
+            min-width: 0;
+        }
+
+        .chatlog__followup {
+            display: flex;
+            margin-bottom: 0.15rem;
+            align-items: center;
+            color: #b5b6b8;
+            font-size: 0.875rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .chatlog__followup-avatar {
+            width: 16px;
+            height: 16px;
+            margin-right: 0.25rem;
+            border-radius: 50%;
+        }
+
+        .chatlog__followup-author {
+            user-select: none;
+            cursor: pointer;
+            margin-right: 0.3rem;
+            font-weight: 600;
+        }
+
+        .chatlog__followup-content {
+            user-select: none;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .chatlog__reference-link {
+            cursor: pointer;
+        }
+
+        .chatlog__reference-link * {
+            display: inline;
+            pointer-events: none;
+        }
+
+        .chatlog__reference-link .hljs {
+            display: inline;
+        }
+
+        .chatlog__reference-link:hover {
+            color: #ffffff;
+        }
+
+        .chatlog__reference-link:hover *:not(.chatlog__markdown-spoiler) {
+            color: inherit;
+        }
+
+        .chatlog__interaction-link * {
+            display: inline;
+            pointer-events: none;
+        }
+
+        .chatlog__interaction-link .hljs {
+            display: inline;
+        }
+
+        .chatlog__interaction-link:hover *:not(.chatlog__markdown-spoiler) {
+            color: inherit;
+        }
+        
+        .chatlog__reference-edited-timestamp {
+            margin-left: 0.25rem;
+            color: #a3a6aa;
+            font-size: 0.75rem;
+            font-weight: 500;
+            direction: ltr;
+            unicode-bidi: bidi-override;
+        }
+
+        .chatlog__reference-attachment-icon {
+            flex-grow: 500;
+        }
+
+        .chatlog__pin-avatar-container {
+            grid-column: 1;
+            width: 40px;
+            height: 15px;
+        }
+
+        .chatlog__pin-avatar {
+            border-radius: 50%;
+            width: 25px;
+        }
+
+        .chatlog__thread-name {
+            color: white;
+            font-weight: 600;
+        }
+
+        .chatlog__author-name {
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .chatlog__author-name:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .chatlog__timestamp {
+            margin-left: 0.3rem;
+            color: #a3a6aa;
+            font-size: 0.75rem;
+            font-weight: 500;
+            direction: ltr;
+            unicode-bidi: bidi-override;
+        }
+
+        .chatlog__content {
+            padding-right: 1rem;
+            font-size: 0.95rem;
+            word-wrap: break-word;
+        }
+
+        .chatlog__message {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            padding: 0.15rem 0;
+            direction: ltr;
+            unicode-bidi: bidi-override;
+        }
+
+        .chatlog__avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .chatlog__attachment {
+            margin-top: 0.3em;
+        }
+
+        .chatlog__attachment-thumbnail {
+            vertical-align: top;
+            max-width: 45vw;
+            max-height: 225px;
+            border-radius: 3px;
+        }
+
+        .chatlog__attachment-audio-container {
+            height: 80px;
+            width: 100%;
+            max-width: 520px;
+            padding: 10px;
+            border-radius: 3px;
+            overflow: hidden;
+            background-color: #2f3136;
+            border: 1px solid #292b2f;
+        }
+
+        .chatlog__attachment-container {
+            height: 40px;
+            width: 100%;
+            max-width: 520px;
+            padding: 10px;
+            border-radius: 3px;
+            overflow: hidden;
+            background-color: #2f3136;
+            border: 1px solid #292b2f;
+        }
+
+        .chatlog__attachment-filesize {
+            color: #72767d;
+            font-size: 12px;
+        }
+
+        .chatlog__attachment-filename {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .chatlog__embed {
+            display: flex;
+            margin-top: 0.3em;
+            max-width: 520px;
+        }
+
+        .chatlog__embed-color-pill {
+            flex-shrink: 0;
+            width: 0.25em;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        .chatlog__embed-content-container {
+            display: flex;
+            flex-direction: column;
+            padding: 0.5em 0.6em;
+            border: 1px solid;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+
+        .chatlog__embed-content {
+            display: flex;
+            width: 100%;
+        }
+
+        .chatlog__embed-text {
+            flex: 1;
+        }
+
+        .chatlog__embed-author {
+            display: flex;
+            margin-bottom: 0.3em;
+            align-items: center;
+        }
+
+        .chatlog__embed-author-icon {
+            margin-right: 0.5em;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        .chatlog__embed-author-name {
+            font-size: 0.875em;
+            font-weight: 600;
+        }
+
+        .chatlog__embed-title {
+            margin-bottom: 0.2em;
+            font-size: 0.875em;
+            font-weight: 600;
+        }
+
+        .chatlog__embed-description {
+            font-weight: 500;
+            font-size: 0.85em;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .chatlog__embed-fields {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .chatlog__embed-field {
+            flex: 0;
+            min-width: 100%;
+            max-width: 506px;
+            padding-top: 0.6em;
+            font-size: 0.875em;
+        }
+
+        .chatlog__embed-field--inline {
+            flex: 1;
+            flex-basis: auto;
+            min-width: 150px;
+        }
+
+        .chatlog__embed-field-name {
+            margin-bottom: 0.2em;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .chatlog__embed-field-value {
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .chatlog__embed-thumbnail {
+            flex: 0;
+            margin-left: 1.2em;
+            max-width: 80px;
+            max-height: 80px;
+            border-radius: 3px;
+        }
+
+        .chatlog__embed-image-container {
+            margin-top: 0.6em;
+        }
+
+        .chatlog__embed-image {
+            max-width: 500px;
+            max-height: 400px;
+            border-radius: 3px;
+        }
+
+        .chatlog__embed-footer {
+            margin-top: 0.6em;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .chatlog__embed-footer-icon {
+            margin-right: 0.2em;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        .chatlog__embed-footer-text {
+            font-size: 0.75em;
+            font-weight: 500;
+        }
+
+        .chatlog__components {
+            display: flex;
+        }
+
+        .chatlog__component-button {
+            display: flex;
+            align-items: center;
+            margin: 0.35em 0.1em 0.1em 0.1em;
+            padding: 0.2em 0.35em;
+            border-radius: 2px;
+        }
+
+        .chatlog__button-label {
+            min-width: 9px;
+            margin-left: 0.35em;
+            margin-right: 0.35em;
+            font-size: 0.875em;
+            color: white;
+            font-weight: 500;
+        }
+
+        .chatlog__button-label img {
+            padding-right: 5px;
+        }
+
+        .chatlog__reactions {
+            display: flex;
+        }
+
+        .chatlog__reaction {
+            display: flex;
+            align-items: center;
+            margin: 0.35em 0.1em 0.1em 0.1em;
+            padding: 0.2em 0.35em;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .chatlog__reaction-count {
+            min-width: 9px;
+            margin-left: 0.35em;
+            font-size: 0.875em;
+        }
+
+        .chatlog__bot-tag {
+            background: #5865f2;
+            color: #ffffff;
+            padding: 0 0.2rem;
+            margin-top: 0.5em;
+            border-radius: 0.1875rem;
+            margin-left: 0.07rem;
+            position: relative;
+            vertical-align: top;
+            display: inline-flex;
+            flex-shrink: 0;
+            text-indent: 0;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 15px;
+        }
+
+        .chatlog__bot-tag-verified {
+            width: 16px;
+            margin-left: -3px;
+        }
+
+        .chatlog__followup .chatlog__bot-tag {
+            margin-right: 0.3rem;
+            margin-top: 0;
+        }
+
+        .meta__details .chatlog__bot-tag {
+            margin-left: 1ch;
+        }
+
+        /* Postamble */
+
+        .postamble {
+            margin: 1.4em 0.3em 0.6em 0.3em;
+            padding: 1em;
+            border-top: 1px solid;
+        }
+
+        /* General */
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            background-color: #36393f;
+            font-family: "Whitney";
+            font-size: 17px;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #0096cf;
+        }
+
+        .spoiler-text {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .spoiler--hidden .spoiler-text {
+            background-color: #202225;
+        }
+
+        .spoiler--hidden:hover .spoiler-text {
+            background-color: rgba(32, 34, 37, 0.8);
+        }
+
+        .quote {
+            border-color: #4f545c;
+        }
+
+        .pre {
+            background-color: #2f3136 !important;
+        }
+
+        .pre--multiline {
+            border-color: #282b30 !important;
+            color: #b9bbbe !important;
+        }
+
+        /* Chatlog */
+
+        .chatlog__message-group {
+            margin-bottom: 1rem;
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .chatlog__message-container {
+            background-color: transparent;
+            transition: background-color 1s ease;
+        }
+
+        .chatlog__message-container--highlighted {
+            background-color: rgba(114, 137, 218, 0.2);
+        }
+
+        .chatlog__followup-symbol {
+            height: 10px;
+            margin: 6px 4px 4px 36px;
+            border-left: 2px solid #4f545c;
+            border-top: 2px solid #4f545c;
+            border-radius: 8px 0 0 0;
+            border-color: #4f545c;
+        }
+
+        .chatlog__reference-icon {
+            width: 20px;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+
+        .chatlog__interaction-icon {
+            width: 15px;
+            display: inline-block;
+            vertical-align: bottom;
+            margin-left: 3px;
+            margin-bottom: 2px;
+        }
+
+        .chatlog__reference-link {
+            color: #b5b6b8;
+        }
+
+        .chatlog__interaction-filler {
+            color: #b5b6b8;
+        }
+
+        .chatlog__interaction-link {
+            color: #1680ab;
+            cursor: pointer;
+        }
+
+        .chatlog__pinned-link {
+            color: white;
+            font-weight: 600;
+        }
+
+        .chatlog__reference-link:hover {
+            color: #ffffff;
+        }
+
+        .chatlog__interaction-link:hover {
+            text-decoration: underline;
+        }
+
+        .chatlog__reference-edited-timestamp {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .chatlog__timestamp {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .chatlog__message--highlighted {
+            background-color: rgba(114, 137, 218, 0.2) !important;
+        }
+
+        .chatlog__message--pinned {
+            background-color: rgba(249, 168, 37, 0.05);
+        }
+
+        .chatlog__embed-color-pill--default {
+            background-color: rgba(79, 84, 92, 1);
+        }
+
+        .chatlog__embed-content-container {
+            background-color: rgba(46, 48, 54, 0.3);
+            border-color: rgba(46, 48, 54, 0.6);
+        }
+
+        .chatlog__embed-author-name {
+            color: #ffffff;
+        }
+
+        .chatlog__embed-author-name-link {
+            color: #ffffff;
+        }
+
+        .chatlog__embed-title {
+            color: #ffffff;
+        }
+
+        .chatlog__reaction-count {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* === INFO === */
+
+        .panel {
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            height: 48px;
+            user-select: none;
+            font-family: "Ginto";
+            font-weight: 500;
+            font-size: 16px;
+            box-shadow: 0 1px 0 rgba(4, 4, 5, 0.2), 0 1.5px 0 rgba(6, 6, 7, 0.05), 0 2px 0 rgba(4, 4, 5, 0.05);
+        }
+
+        .panel__hashtag-icon {
+            width: 24px;
+            height: 24px;
+            margin-left: 16px;
+            margin-right: 8px;
+            margin-top: 1px;
+        }
+
+        .panel__channel-topic {
+            border-left-style: solid;
+            border-color: #4f545c;
+            border-width: 1px;
+            color: #b9bbbe;
+            margin-left: 10px;
+            padding-left: 10px;
+            font-family: 'Whitney';
+        }
+
+        .panel__summary-button {
+            display: flex;
+            align-items: center;
+            padding: 0.2em 0.35em;
+            border-radius: 2px;
+            margin-left: auto;
+            margin-right: 50px;
+            color: #b9bbbe;
+        }
+
+        .panel__summary-button:hover {
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .summary-popout.visible {
+            transform: scale(1);
+            transition: transform 200ms ease-in-out;
+        }
+
+        .summary-popout {
+            position: absolute;
+            z-index: 6969;
+            background-color: #36393f;
+            box-shadow:
+                0 2px 10px 0 rgb(0 0 0 / 20%),
+                0 0 0 1px rgb(32 34 37 / 60%);
+            width: 250px;
+            border-radius: 5px;
+            overflow: hidden;
+            transform: scale(0);
+            transform-origin: top right;
+        }
+
+        .main {
+            display: flex;
+            overflow-y: auto;
+            height: calc(100% - 126px);
+            flex-direction: column;
+        }
+
+        .main::-webkit-scrollbar {
+          width: 8px;
+          background-color: rgba(0,0,0,0);
+        }
+
+        /* Add a thumb */
+        .main::-webkit-scrollbar-thumb {
+          background-color: #202225;
+          border: 0 #36393f solid;
+          border-left-width: 1px;
+          border-right-width: 1px;
+        }
+
+        .buffer {
+            flex: 1;
+        }
+
+        .info {
+            margin: 0 16px;
+            padding-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            flex-shrink: 0;
+            user-select: none;
+            font-family: "Ginto";
+        }
+
+        .info__title {
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 40px;
+        }
+
+        .info__subject {
+            color: #b9bbbe;
+            font-size: 16px;
+            line-height: 20px;
+            font-family: "Whitney";
+        }
+
+        .info__channel-message-count {
+            margin-top: 2px;
+        }
+
+        .footer {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            height: 20px;
+            border-radius: 5px;
+            margin: 0 16px 24px;
+            padding: 16px;
+            width: calc(100% - 50px);
+            background-color: #202225;
+            position: relative;
+            z-index: 10;
+            user-select: none;
+        }
+
+        .footer__text {
+            font-size: 16px;
+            line-height: 20px;
+            font-family: 'Ginto';
+            font-weight: 400;
+        }
+
+        #context-menu {
+            position: absolute;
+            width: 188px;
+            border-radius: 4px;
+            padding: 6px 8px;
+            background-color: #18191c;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, .24);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: #b9bbbe;
+            transform: scale(0);
+            transform-origin: top left;
+            z-index: 6969;
+        }
+
+        #context-menu.visible {
+            transform: scale(1);
+            transition: transform 200ms ease-in-out;
+        }
+
+        #context-menu .item {
+            margin: 2px 0;
+            padding: 0 8px;
+            display: flex;
+            align-items: center;
+            border-radius: 2px;
+            min-height: 32px;
+            cursor: pointer;
+        }
+
+        #context-menu .item:hover {
+            color: #fff;
+        }
+
+        .meta-popout {
+            position: absolute;
+            z-index: 6969;
+            background-color: #292b2f;
+            box-shadow:
+                0 2px 10px 0 rgb(0 0 0 / 20%),
+                0 0 0 1px rgb(32 34 37 / 60%);
+            width: 280px;
+            border-radius: 5px;
+            overflow: hidden;
+            transform: scale(0);
+            transform-origin: top left;
+        }
+
+        .meta-popout img {
+            height: 16px;
+            width: 16px;
+        }
+
+        .meta__img-border {
+            border-radius: 50%;
+        }
+
+        .meta-popout.mounted {
+            transform: scale(1);
+            transition: transform .3 ease-in-out;;
+        }
+
+        .meta__divider {
+            height: 4px;
+            width: 4px;
+            border-radius: 50%;
+            background-color: #4f545c;
+        }
+
+        .meta__divider-2 {
+            margin: 5px 12px 10px;
+            height: 1px;
+            background-color: #4f545c;
+        }
+
+        .meta__header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #202225;
+            padding-top: 10px;
+        }
+
+        .meta__header img {
+            user-select: none;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+
+        .meta__details {
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 7px;
+        }
+
+        .meta__display-name {
+            font-weight: 500;
+            color: #fff;
+            opacity: 0.9;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-family: 'Ginto';
+            font-size: 12px;
+        }
+
+        .meta__user {
+            font-weight: 500;
+            color: #fff;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-family: 'Ginto';
+        }
+
+        .meta__discriminator {
+            font-weight: 500;
+            color: #fff;
+            opacity: .6;
+            font-family: 'Ginto';
+        }
+
+        .meta-popout .meta__header .bot {
+            margin-left: 1ch;
+        }
+
+        .meta__description {
+            padding: 10px;
+            background-color: #18191c;
+            margin: 10px;
+            border-radius: 5%;
+        }
+
+        .meta__field {
+            margin-bottom: 10px;
+        }
+
+        .meta__title {
+            font-weight: 700;
+            color: #72767d;
+            text-transform: uppercase;
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 1px;
+        }
+
+        .meta__value {
+            font-size: 14px;
+            line-height: 16px;
+            align-items: center;
+            display: flex;
+            column-gap: 6px;
+        }
+
+        .meta__support {
+            text-align: right;
+        }
+
+        .meta__support a {
+            color: #72767d;
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .dropdownButton {
+          width: 100%;
+          color: #6E767D;
+          padding: 11.5px;
+          font-size: 15px;
+          cursor: pointer;
+          text-align: left;
+          border-radius: 5px;
+          background-color: #2F3136;
+          border: 1px solid #202225;
+        }
+
+        .chatlog__component-disabled {
+          cursor: not-allowed;
+          opacity: 0.6;
+        }
+
+        .chatlog__component-disabled a {
+          cursor: not-allowed;
+        }
+
+        .chatlog__component-disabled button {
+          cursor: not-allowed;
+        }
+
+        .chatlog__component-dropdown {
+          width: 400px;
+          margin-top: 5px;
+          position: relative;
+          display: inline-block;
+        }
+
+        .chatlog__dropdown-content {
+          position: relative;
+        }
+
+        .chatlog__dropdown-emoji {
+          left: 10px;
+          position: absolute;
+        }
+
+        .chatlog__dropdown-emoji img {
+          width: 1.4em;
+          height: 1.4em;
+        }
+
+        .chatlog__dropdown-text {
+          padding-left: 25px
+        }
+
+        .chatlog__role-icon {
+            height: 16px;
+            width: 16px;
+            margin-left: 5px;
+            transform: translateY(2px);
+        }
+
+        .dropdownContent {
+          z-index: 1;
+          display: none;
+          width: 99.5%;
+          font-size: 14px;
+          position: absolute;
+          margin-top: -0.7px;
+          background-color: #2F3136;
+          border: 1px solid #202225;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .dropdownContentEmoji {
+          width: 25px;
+          position: absolute;
+        }
+
+        .dropdownContentTitle {
+          color: white;
+          font-weight: 600;
+        }
+
+        .dropdownContent a {
+          display: block;
+          padding: 12px 16px;
+          text-decoration: none;
+        }
+
+        .chatlog__dropdown-icon {
+          right: 0px;
+          width: 25px;
+          margin-top: -12px;
+          position: absolute;
+          padding-right: 4px;
+        }
+
+        .chatlog__component-dropdown-border {
+          border-bottom-left-radius: 0px;
+          border-bottom-right-radius: 0px;
+        }
+
+        .dropdownContentDesc { color: #999B9E; }
+        .dropdownButton:hover { border: 1px solid #040405; }
+        .chatlog__component-dropdown-show { display: block; }
+        .chatlog__component-dropdown a:hover { background-color: #292B2F; }
+
+        .cursor_pointer { cursor: pointer; }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/timezone.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.5/plugin/customParseFormat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.5/plugin/isToday.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.5/plugin/isTomorrow.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.5/plugin/isBetween.js"></script>
+
+    <script>
+        <!--  Scroll to Message (References)  -->
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element !== null && element !== undefined) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message-container--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message-container--highlighted');
+                }, 2000);
+            }
+        }
+
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        <!--  Spoiler (|| Spoiler ||)  -->
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+
+        <!--  Menu Dropdown (Selectmenu)  -->
+        function showDropdown(dropdownID) {
+          <!--    If you are reading this and can improve the JS logic, let me know!-->
+          document.getElementById("dropdownButton" + dropdownID).classList.toggle("chatlog__component-dropdown-border");
+          document.getElementById("dropdownMenuContent" + dropdownID).classList.toggle("chatlog__component-dropdown-show");
+          document.getElementById("dropdownMenu" + dropdownID).classList.toggle("chatlog__component-dropdown-show");
+        }
+
+        <!--  Code Block Markdown (```lang```) -->
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div class="panel">
+    <img class="panel__hashtag-icon" src="https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/discord-hashtag.svg"/>
+    <span>weekly-challange-solutions</span>
+
+    
+
+    <div class="panel__summary-button" id="summary-button">
+        <span>Summary</span>
+    </div>
+</div>
+
+<div class="main">
+    <div class="buffer">
+        <!-- Magical space goes here -->
+    </div>
+
+    <div class="info">
+        <span class="info__title">Welcome to #weekly-challange-solutions!</span>
+        <span class="info__subject">This is the start of the #weekly-challange-solutions channel. </span>
+    </div>
+
+    <div class="chatlog">
+        <div class="chatlog__message-group">
+    <div id="chatlog__message-container-1001018227138244628" class="chatlog__message-container" data-message-id="1001018227138244628">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/225454058322919425/0894087026df9832ca33748c33f5540a.png?size=1024"  data-user-id="225454058322919425" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="DimDim#1337" data-user-id="225454058322919425" style="color: #FFFFFF;">DimDim</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Monday, 25 July 2022 06:49">25-07-2022 06:49</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1001018227138244628" id="message-1001018227138244628">
+                    <span class="chatlog__markdown-preserve">wow this challenge is impossible. unknowncoin cannot be replaced :(</span>
+
+
+                    
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1001018347997106236" class="chatlog__message-container" data-message-id="1001018347997106236">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/624076054969188363/db494f0333273554cac9ca9b942542a5.png?size=1024"  data-user-id="624076054969188363" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="FusionSid#3645" data-user-id="624076054969188363" style="color: #f1c40f;">!Tea</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Monday, 25 July 2022 06:49">25-07-2022 06:49</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1001018347997106236" id="message-1001018347997106236">
+                    <span class="chatlog__markdown-preserve"><span class="mention" title="624029883626029066">@i use arch btw</span> you should add unknowncoin to DhruvBanking<img class="emoji emoji--small" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/2122.png" alt="™️" title="Trade Mark" aria-label="Emoji: Trade Mark"></span>
+
+
+                    
+
+                    
+
+                    
+
+                    <div class="chatlog__reactions"><div class=chatlog__reaction>
+    <img class="emoji emoji--small" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f49b.png" alt="💛" title="Yellow Heart" aria-label="Emoji: Yellow Heart">
+    <span class="chatlog__reaction-count">1</span>
+</div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1001092583856025661" class="chatlog__message-container" data-message-id="1001092583856025661">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/320426328216305665/f517b76b235f1dfb545930808f0b76a7.png?size=1024"  data-user-id="320426328216305665" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="Viking#9320" data-user-id="320426328216305665" style="color: #407cbd;">UndeadViking</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Monday, 25 July 2022 11:44">25-07-2022 11:44</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1001092583856025661" id="message-1001092583856025661">
+                    <span class="chatlog__markdown-preserve">Here&#x27;s a very very in-efficient solution for current weekly challenge
+<div class="pre pre--multiline nohighlight">n=6
+x=20
+count=0
+for i in range(n):
+&nbsp;&nbsp;&nbsp;&nbsp;for j in range(n):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (i+1)*(j+1)==x:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count+=1
+print(count)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></span>
+
+
+                    
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+            <div id="chatlog__message-container-1001092821979254795" class="chatlog__message-container" data-message-id="1001092821979254795">
+                    <div class="chatlog__message">
+
+                        <div class="chatlog__message-aside">
+                            <div class="chatlog__short-timestamp" title="Monday, 25 July 2022 11:45">11:45</div>
+                        </div>
+
+                        <div class="chatlog__message-primary">
+                            <div class="chatlog__content chatlog__markdown" data-message-id="1001092821979254795" id="message-1001092821979254795">
+                                <span class="chatlog__markdown-preserve">I&#x27;ll try to do it efficiently later</span>
+
+
+                                
+
+                                
+
+                                
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+            </div></div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1001212913874382989" class="chatlog__message-container" data-message-id="1001212913874382989">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/262703675967799297/ec576fae966223565ebe9e3d17fb52b0.png?size=1024"  data-user-id="262703675967799297" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="Spiderboydk#8759" data-user-id="262703675967799297" style="color: #f1c40f;">Bearded<span style="text-decoration: underline">Emperor</span>Spider__senpai</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Monday, 25 July 2022 19:42">25-07-2022 19:42</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1001212913874382989" id="message-1001212913874382989">
+                    <span class="chatlog__markdown-preserve">Here&#x27;s a solution in C with linear computational complexity.
+<div class="pre pre--multiline nohighlight">c
+int multab(int n, int x)
+{
+&nbsp;&nbsp;if (n == 0) return 0;
+
+&nbsp;&nbsp;int result = x &lt; n; 
+&nbsp;&nbsp;for (int row = 2; row &lt;= n; ++row)
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;if (x % row == 0) ++result;
+&nbsp;&nbsp;}
+
+&nbsp;&nbsp;return result;
+}</div></span>
+<span class="chatlog__reference-edited-timestamp" title="Monday, 25 July 2022 19:45">(edited)</span>
+
+                    
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1001228463044309042" class="chatlog__message-container" data-message-id="1001228463044309042">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/236596516423204865/53e194c2c694f9ec62124aa9a4e9c986.png?size=1024"  data-user-id="236596516423204865" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="encodeous#7441" data-user-id="236596516423204865" style="color: #ff6961;">encodeous</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Monday, 25 July 2022 20:44">25-07-2022 20:44</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1001228463044309042" id="message-1001228463044309042">
+                    <span class="chatlog__markdown-preserve">Here&#x27;s a solution in C++ that runs with O(sqrt(x)) time complexity.
+<div class="pre pre--multiline nohighlight">c++
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int main()
+{
+&nbsp;&nbsp;&nbsp;&nbsp;int n, x;
+&nbsp;&nbsp;&nbsp;&nbsp;cin &gt;&gt; n &gt;&gt; x;
+&nbsp;&nbsp;&nbsp;&nbsp;int cnt = 0;
+&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 1; i * i &lt;= x; i++){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(x % i == 0 &amp;&amp; (x / i) &lt;= n){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(i * i != x){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cnt += 2;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}else{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cnt++;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; cnt;
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;
+}</div></span>
+<span class="chatlog__reference-edited-timestamp" title="Monday, 25 July 2022 20:49">(edited)</span>
+
+                    
+
+                    
+
+                    
+
+                    <div class="chatlog__reactions"><div class=chatlog__reaction>
+    <img class="emoji emoji--small" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f44d.png" alt="👍" title="Thumbs Up Sign" aria-label="Emoji: Thumbs Up Sign">
+    <span class="chatlog__reaction-count">1</span>
+</div>
+<div class=chatlog__reaction>
+    <img class="emoji emoji--small" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1f5.png" alt="🇵" title="Regional Indicator Symbol Letter P" aria-label="Emoji: Regional Indicator Symbol Letter P">
+    <span class="chatlog__reaction-count">1</span>
+</div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1001712933891481620" class="chatlog__message-container" data-message-id="1001712933891481620">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/129445652215234560/3bbf39b9e6ac06eb8b4dda5d4f4837b5.png?size=1024"  data-user-id="129445652215234560" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="Ahri#5162" data-user-id="129445652215234560" style="color: #3498db;">Ahri</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Wednesday, 27 July 2022 04:49">27-07-2022 04:49</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1001712933891481620" id="message-1001712933891481620">
+                    <span class="chatlog__markdown-preserve">Go, native packages
+<div class="pre pre--multiline nohighlight">package main
+
+import (
+&nbsp;&nbsp;&nbsp;&nbsp;&quot;fmt&quot;
+)
+
+func main() {
+&nbsp;&nbsp;&nbsp;&nbsp;arraySize := 5&nbsp;&nbsp;&nbsp;&nbsp; // size of array N
+&nbsp;&nbsp;&nbsp;&nbsp;value := 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // number to find
+&nbsp;&nbsp;&nbsp;&nbsp;var total int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// counter for value
+&nbsp;&nbsp;&nbsp;&nbsp;var multiplied int // result of multiplication
+
+&nbsp;&nbsp;&nbsp;&nbsp;total = 0 // reset counter
+
+&nbsp;&nbsp;&nbsp;&nbsp;for i := 1; i &lt;= arraySize; i++ {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for j := 1; j &lt;= arraySize; j++ {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;multiplied = i * j
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if value == multiplied {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total++
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println(&quot;Counted&quot;, value, &quot;a total of&quot;, total, &quot;times in an array of&quot;, arraySize)
+}</div></span>
+
+
+                    
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1001743074436841502" class="chatlog__message-container" data-message-id="1001743074436841502">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/466047293217570817/057fa00f7378b78fc5319b676b939bdc.png?size=1024"  data-user-id="466047293217570817" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="Litty#5861" data-user-id="466047293217570817" style="color: #FFFFFF;">Litty</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Wednesday, 27 July 2022 06:49">27-07-2022 06:49</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1001743074436841502" id="message-1001743074436841502">
+                    <span class="chatlog__markdown-preserve">What’s the max size of N?</span>
+
+
+                    
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1002111049153130526" class="chatlog__message-container" data-message-id="1002111049153130526">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/466047293217570817/057fa00f7378b78fc5319b676b939bdc.png?size=1024"  data-user-id="466047293217570817" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="Litty#5861" data-user-id="466047293217570817" style="color: #FFFFFF;">Litty</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Thursday, 28 July 2022 07:11">28-07-2022 07:11</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1002111049153130526" id="message-1002111049153130526">
+                    <span class="chatlog__markdown-preserve">This is definitely the kind of answer Apple was looking for.
+
+<div class="pre pre--multiline nohighlight">c++
+#include &lt;array&gt;
+#include &lt;cstdint&gt;
+#include &lt;iostream&gt;
+#include &lt;limits&gt;
+
+// The integrals used for N and X.
+using Factor = uint8_t;
+using Product = uint16_t;
+
+// Compute the largest factor we&#x27;ll encounter.
+constexpr Factor FactorMax = std::numeric_limits&lt;Factor&gt;::max();
+
+// Compute the largest product we&#x27;ll encounter.
+static_assert(
+&nbsp;&nbsp;&nbsp;&nbsp;// Ensure Factor Type can be squared without overflowing.
+&nbsp;&nbsp;&nbsp;&nbsp;(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(std::numeric_limits&lt;uintmax_t&gt;::max() / static_cast&lt;uintmax_t&gt;(FactorMax))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt; static_cast&lt;uintmax_t&gt;(FactorMax)
+&nbsp;&nbsp;&nbsp;&nbsp;),
+&nbsp;&nbsp;&nbsp;&nbsp;&quot;Factor Type must be smaller to be used in this program.&quot;
+);
+
+static_assert(
+&nbsp;&nbsp;&nbsp;&nbsp;// Ensure Product Type can contain the largest factor.
+&nbsp;&nbsp;&nbsp;&nbsp;(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(static_cast&lt;uintmax_t&gt;(FactorMax) * static_cast&lt;uintmax_t&gt;(FactorMax))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;= static_cast&lt;uintmax_t&gt;(std::numeric_limits&lt;Product&gt;::max())
+&nbsp;&nbsp;&nbsp;&nbsp;),
+&nbsp;&nbsp;&nbsp;&nbsp;&quot;Product Type must be larger to contain ProductMax.&quot;
+);
+
+constexpr Product ProductMax = static_cast&lt;Product&gt;(FactorMax) * static_cast&lt;Product&gt;(FactorMax);
+
+using Table = std::array&lt;std::array&lt;Product, ProductMax&gt;, FactorMax&gt;;
+constexpr Table generateProductCountTable() {
+&nbsp;&nbsp;&nbsp;&nbsp;Table result;
+
+&nbsp;&nbsp;&nbsp;&nbsp;for (int n = 0; n &lt; result.size(); n++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result[n].fill(0);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+&nbsp;&nbsp;&nbsp;&nbsp;// For every possible table N...
+&nbsp;&nbsp;&nbsp;&nbsp;for (int n = 1; n &lt; FactorMax; n++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int i = 1; i &lt;= n; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product product = (i*n);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product increment = 1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (i != n) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;increment = 2;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int m = n; m &lt; FactorMax; m++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result[m][product] += increment;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+&nbsp;&nbsp;&nbsp;&nbsp;return result;
+}
+
+constexpr Table CountTable = generateProductCountTable();
+int getProductCount(Factor N, Product X) {
+&nbsp;&nbsp;&nbsp;&nbsp;return CountTable[N][X];
+}</div>
+
+Thanks to <span class="pre pre-inline">constexpr</span> all the computation is done at compile-time, so... in a stretchy technical way... the _runtime_ complexity is O(1).</span>
+<span class="chatlog__reference-edited-timestamp" title="Thursday, 28 July 2022 07:20">(edited)</span>
+
+                    
+
+                    
+
+                    
+
+                    <div class="chatlog__reactions"><div class=chatlog__reaction>
+    <img class="emoji emoji--small" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1e6.png" alt="🇦" title="Regional Indicator Symbol Letter A" aria-label="Emoji: Regional Indicator Symbol Letter A">
+    <span class="chatlog__reaction-count">1</span>
+</div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1002115822271086602" class="chatlog__message-container" data-message-id="1002115822271086602">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/466047293217570817/057fa00f7378b78fc5319b676b939bdc.png?size=1024"  data-user-id="466047293217570817" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="Litty#5861" data-user-id="466047293217570817" style="color: #FFFFFF;">Litty</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Thursday, 28 July 2022 07:30">28-07-2022 07:30</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1002115822271086602" id="message-1002115822271086602">
+                    <span class="chatlog__markdown-preserve"><span class="pre pre-inline">constexpr</span> stuff in C++20 is tricky. Can&#x27;t do anything more than a std::vector, so no std::maps or std::sets allowed. I went with the very reasonable alternative of populating a ~65,535 element array with the product counts (so index 12 = number of times 12 appears in the multiplication table), and then repeating for every possible value of N.
+
+Can&#x27;t godbolt it. Compile time is like 3+ mins, and you need to pass <span class="pre pre-inline">-fconstexpr-ops-limit=999999999</span>. But you can see this pretty screenshot I took, running:
+
+<div class="pre pre--multiline nohighlight">c++
+int main() {
+&nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; &quot;Testing 6x6 table:&quot; &lt;&lt; std::endl;
+&nbsp;&nbsp;&nbsp;&nbsp;for (int i = 0; i &lt;= 36; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; i &lt;&lt; &quot;: &quot; &lt;&lt; getProductCount(6, i) &lt;&lt; &quot; times&quot; &lt;&lt; std::endl;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</div></span>
+
+
+                    
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+            <div id="chatlog__message-container-1002115893058351174" class="chatlog__message-container" data-message-id="1002115893058351174">
+                    <div class="chatlog__message">
+
+                        <div class="chatlog__message-aside">
+                            <div class="chatlog__short-timestamp" title="Thursday, 28 July 2022 07:30">07:30</div>
+                        </div>
+
+                        <div class="chatlog__message-primary">
+                            <div class="chatlog__content chatlog__markdown" data-message-id="1002115893058351174" id="message-1002115893058351174">
+                                
+
+                                <div class=chatlog__attachment>
+    <a href=https://media.discordapp.net/attachments/1001013298906533958/1002115891862978570/Screen_Shot_2022-07-28_at_12.29.38_AM.png><img class=chatlog__attachment-thumbnail src=https://media.discordapp.net/attachments/1001013298906533958/1002115891862978570/Screen_Shot_2022-07-28_at_12.29.38_AM.png></a>
+</div>
+
+
+                                
+
+                                
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+            </div></div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1002143565524238338" class="chatlog__message-container" data-message-id="1002143565524238338">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                <div class='chatlog__followup-symbol'></div>
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/624029883626029066/ae4d01c6d6c5cb128d7e5b89fcae7f37.png?size=1024"  data-user-id="624029883626029066" />
+            </div>
+            <div class="chatlog__message-primary">
+                <div class="chatlog__followup">
+        <img class="chatlog__followup-avatar" src="https://cdn.discordapp.com/avatars/466047293217570817/057fa00f7378b78fc5319b676b939bdc.png?size=1024" alt="Avatar" loading="lazy" data-user-id="466047293217570817">
+        
+        <div class="chatlog__followup-author" style="color: #FFFFFF;" title="Litty#5861" data-user-id="466047293217570817">Litty</div>
+        <div class="chatlog__followup-content">
+            <span class="chatlog__reference-link" onclick="scrollToMessage(event, '1002111049153130526')">
+                    <em>This is definitely the kind of answer Apple was looking for.
+
+<span class="pre pre-inline">c++
+#include <array>
+#include <cstdint>
+#include <iostream>
+#include <limits>
+
+// The integrals used for N and X.
+using Factor = uint8_t;
+using Product = uint16_t;
+
+// Compute the largest factor we'll encounter.
+constexpr Factor FactorMax = std::numeric_limits<Factor>::max();
+
+// Compute the largest product we'll encounter.
+static_assert(
+&nbsp;&nbsp;&nbsp;&nbsp;// Ensure Factor Type can be squared without overflowing.
+&nbsp;&nbsp;&nbsp;&nbsp;(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(std::numeric_limits<uintmax_t>::max() / static_cast<uintmax_t>(FactorMax))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> static_cast<uintmax_t>(FactorMax)
+&nbsp;&nbsp;&nbsp;&nbsp;),
+&nbsp;&nbsp;&nbsp;&nbsp;"Factor Type must be smaller to be used in this program."
+);
+
+static_assert(
+&nbsp;&nbsp;&nbsp;&nbsp;// Ensure Product Type can contain the largest factor.
+&nbsp;&nbsp;&nbsp;&nbsp;(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(static_cast<uintmax_t>(FactorMax) * static_cast<uintmax_t>(FactorMax))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<= static_cast<uintmax_t>(std::numeric_limits<Product>::max())
+&nbsp;&nbsp;&nbsp;&nbsp;),
+&nbsp;&nbsp;&nbsp;&nbsp;"Product Type must be larger to contain ProductMax."
+);
+
+constexpr Product ProductMax = static_cast<Product>(FactorMax) * static_cast<Product>(FactorMax);
+
+using Table = std::array<std::array<Product, ProductMax>, FactorMax>;
+constexpr Table generateProductCountTable() {
+&nbsp;&nbsp;&nbsp;&nbsp;Table result;
+
+&nbsp;&nbsp;&nbsp;&nbsp;for (int n = 0; n < result.size(); n++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result[n].fill(0);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+&nbsp;&nbsp;&nbsp;&nbsp;// For every possible table N...
+&nbsp;&nbsp;&nbsp;&nbsp;for (int n = 1; n < FactorMax; n++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int i = 1; i <= n; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product product = (i*n);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product increment = 1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (i != n) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;increment = 2;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int m = n; m < FactorMax; m++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result[m][product] += increment;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+&nbsp;&nbsp;&nbsp;&nbsp;return result;
+}
+
+constexpr Table CountTable = generateProductCountTable();
+int getProductCount(Factor N, Product X) {
+&nbsp;&nbsp;&nbsp;&nbsp;return CountTable[N][X];
+}</span>
+
+Thanks to <span class="pre pre-inline">constexpr</span> all the computation is done at compile-time, so... in a stretchy technical way... the _runtime_ complexity is O(1).</em> 
+            </span>
+        </div>
+</div>
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="ʇɐʎɐᴚ ʌnɹɥᗡ#2867" data-user-id="624029883626029066" style="color: #ff6961;">i use arch btw</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Thursday, 28 July 2022 09:20">28-07-2022 09:20</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1002143565524238338" id="message-1002143565524238338">
+                    <span class="chatlog__markdown-preserve">Time complexity be like: <img class="emoji emoji--small" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f5ff.png" alt="🗿" title="Moyai" aria-label="Emoji: Moyai"></span>
+
+
+                    
+
+                    
+
+                    
+
+                    <div class="chatlog__reactions"><div class=chatlog__reaction>
+    <img class="emoji emoji--small" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f606.png" alt="😆" title="Smiling Face With Open Mouth And Tightly-Closed Eyes" aria-label="Emoji: Smiling Face With Open Mouth And Tightly-Closed Eyes">
+    <span class="chatlog__reaction-count">1</span>
+</div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1002210498080673792" class="chatlog__message-container" data-message-id="1002210498080673792">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/236596516423204865/53e194c2c694f9ec62124aa9a4e9c986.png?size=1024"  data-user-id="236596516423204865" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="encodeous#7441" data-user-id="236596516423204865" style="color: #ff6961;">encodeous</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Thursday, 28 July 2022 13:46">28-07-2022 13:46</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1002210498080673792" id="message-1002210498080673792">
+                    <span class="chatlog__markdown-preserve">This is an answer that Apple expects.
+<div class="pre pre--multiline nohighlight">c++
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+#define MN 100000
+struct precalc{
+&nbsp;&nbsp;&nbsp;&nbsp;int smallest_prime_factor[MN + 1];
+&nbsp;&nbsp;&nbsp;&nbsp;constexpr precalc() : smallest_prime_factor(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 2; i &lt;= MN; i++){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(smallest_prime_factor[i] == 0){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int j = i + i; j &lt;= MN; j += i) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(smallest_prime_factor[j] == 0)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;smallest_prime_factor[j] = i;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+};
+static constexpr precalc spf;
+int main()
+{
+&nbsp;&nbsp;&nbsp;&nbsp;// only works when MN &gt;= x
+
+&nbsp;&nbsp;&nbsp;&nbsp;// executing trials
+&nbsp;&nbsp;&nbsp;&nbsp;// runtime time complexity: O(logN)
+&nbsp;&nbsp;&nbsp;&nbsp;// compilation time complexity: O(NloglogN)
+&nbsp;&nbsp;&nbsp;&nbsp;auto start_time = chrono::high_resolution_clock::now();
+
+&nbsp;&nbsp;&nbsp;&nbsp;long sum = 0;
+
+&nbsp;&nbsp;&nbsp;&nbsp;for(int x = 2; x &lt;= MN; x++){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int num = x;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int divisors = 1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(spf.smallest_prime_factor[num] != 0){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;auto spfn = spf.smallest_prime_factor[num];
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int cnt = 0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(num % spfn == 0){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cnt++;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num /= spfn;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(cnt != 0)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;divisors *= (cnt + 1);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(num != 1) divisors *= 2;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum += divisors;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+&nbsp;&nbsp;&nbsp;&nbsp;auto end_time = chrono::high_resolution_clock::now();
+&nbsp;&nbsp;&nbsp;&nbsp;auto time = end_time - start_time;
+
+&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; &quot;sum: &quot; &lt;&lt; sum &lt;&lt; &quot; elapsed: &quot; &lt;&lt; chrono::duration_cast&lt;chrono::milliseconds&gt;(time).count() &lt;&lt; &quot; ms&quot; &lt;&lt; endl;
+}</div>
+runtime time complexity: <span class="pre pre-inline">O(logN)</span>
+compilation time complexity: <span class="pre pre-inline">O(NloglogN)</span>
+memory complexity: <span class="pre pre-inline">O(N)</span></span>
+
+
+                    
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+            <div id="chatlog__message-container-1002210721255403600" class="chatlog__message-container" data-message-id="1002210721255403600">
+                    <div class="chatlog__message">
+
+                        <div class="chatlog__message-aside">
+                            <div class="chatlog__short-timestamp" title="Thursday, 28 July 2022 13:47">13:47</div>
+                        </div>
+
+                        <div class="chatlog__message-primary">
+                            <div class="chatlog__content chatlog__markdown" data-message-id="1002210721255403600" id="message-1002210721255403600">
+                                <span class="chatlog__markdown-preserve">results for calculating the sum of the answers when N = <span class="pre pre-inline">100000</span> where X ranges from <span class="pre pre-inline">2...100000</span></span>
+
+
+                                <div class=chatlog__attachment>
+    <a href=https://media.discordapp.net/attachments/1001013298906533958/1002210720462672012/unknown.png><img class=chatlog__attachment-thumbnail src=https://media.discordapp.net/attachments/1001013298906533958/1002210720462672012/unknown.png></a>
+</div>
+
+
+                                
+
+                                
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+            </div></div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1002212178239180810" class="chatlog__message-container" data-message-id="1002212178239180810">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/236596516423204865/53e194c2c694f9ec62124aa9a4e9c986.png?size=1024"  data-user-id="236596516423204865" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="encodeous#7441" data-user-id="236596516423204865" style="color: #ff6961;">encodeous</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Thursday, 28 July 2022 13:53">28-07-2022 13:53</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1002212178239180810" id="message-1002212178239180810">
+                    <span class="chatlog__markdown-preserve">the compilation does not exceed the maximum step limit for <span class="pre pre-inline">mingw64</span> :)</span>
+
+
+                    
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+            <div id="chatlog__message-container-1002212693450702868" class="chatlog__message-container" data-message-id="1002212693450702868">
+                    <div class="chatlog__message">
+
+                        <div class="chatlog__message-aside">
+                            <div class="chatlog__short-timestamp" title="Thursday, 28 July 2022 13:55">13:55</div>
+                        </div>
+
+                        <div class="chatlog__message-primary">
+                            <div class="chatlog__content chatlog__markdown" data-message-id="1002212693450702868" id="message-1002212693450702868">
+                                <span class="chatlog__markdown-preserve"><em>this submission is a bit overkill, but whatever</em></span>
+
+
+                                
+
+                                
+
+                                
+
+                                <div class="chatlog__reactions"><div class=chatlog__reaction>
+    <img class="emoji emoji--small" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f44f.png" alt="👏" title="Clapping Hands Sign" aria-label="Emoji: Clapping Hands Sign">
+    <span class="chatlog__reaction-count">1</span>
+</div>
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+            </div></div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1002212733871202384" class="chatlog__message-container" data-message-id="1002212733871202384">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/332990813195993092/a4839e66b6806492c96c03ade814f6e2.png?size=1024"  data-user-id="332990813195993092" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="EpicPix#5959" data-user-id="332990813195993092" style="color: #206694;">EpicPix</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Thursday, 28 July 2022 13:55">28-07-2022 13:55</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1002212733871202384" id="message-1002212733871202384">
+                    <span class="chatlog__markdown-preserve"><em>a bit</em></span>
+
+
+                    
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1002235232235294810" class="chatlog__message-container" data-message-id="1002235232235294810">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                <div class='chatlog__followup-symbol'></div>
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/129445652215234560/3bbf39b9e6ac06eb8b4dda5d4f4837b5.png?size=1024"  data-user-id="129445652215234560" />
+            </div>
+            <div class="chatlog__message-primary">
+                <div class="chatlog__followup">
+        <img class="chatlog__followup-avatar" src="https://cdn.discordapp.com/avatars/466047293217570817/057fa00f7378b78fc5319b676b939bdc.png?size=1024" alt="Avatar" loading="lazy" data-user-id="466047293217570817">
+        
+        <div class="chatlog__followup-author" style="color: #FFFFFF;" title="Litty#5861" data-user-id="466047293217570817">Litty</div>
+        <div class="chatlog__followup-content">
+            <span class="chatlog__reference-link" onclick="scrollToMessage(event, '1001743074436841502')">
+                    <em>What’s the max size of N?</em> 
+            </span>
+        </div>
+</div>
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="Ahri#5162" data-user-id="129445652215234560" style="color: #3498db;">Ahri</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Thursday, 28 July 2022 15:24">28-07-2022 15:24</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1002235232235294810" id="message-1002235232235294810">
+                    <span class="chatlog__markdown-preserve">What&#x27;s the max time of your lifespan</span>
+
+
+                    
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1002236373597700219" class="chatlog__message-container" data-message-id="1002236373597700219">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/262703675967799297/ec576fae966223565ebe9e3d17fb52b0.png?size=1024"  data-user-id="262703675967799297" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="Spiderboydk#8759" data-user-id="262703675967799297" style="color: #f1c40f;">Bearded<span style="text-decoration: underline">Emperor</span>Spider__senpai</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Thursday, 28 July 2022 15:29">28-07-2022 15:29</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1002236373597700219" id="message-1002236373597700219">
+                    <span class="chatlog__markdown-preserve">Nice <img class="emoji emoji--small" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f604.png" alt="😄" title="Smiling Face With Open Mouth And Smiling Eyes" aria-label="Emoji: Smiling Face With Open Mouth And Smiling Eyes"></span>
+
+
+                    
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+            <div id="chatlog__message-container-1002236439343419416" class="chatlog__message-container" data-message-id="1002236439343419416">
+                    <div class="chatlog__message">
+
+                        <div class="chatlog__message-aside">
+                            <div class="chatlog__short-timestamp" title="Thursday, 28 July 2022 15:29">15:29</div>
+                        </div>
+
+                        <div class="chatlog__message-primary">
+                            <div class="chatlog__content chatlog__markdown" data-message-id="1002236439343419416" id="message-1002236439343419416">
+                                <span class="chatlog__markdown-preserve">I love how people went totally overboard with this assignment <img class="emoji emoji--small" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f604.png" alt="😄" title="Smiling Face With Open Mouth And Smiling Eyes" aria-label="Emoji: Smiling Face With Open Mouth And Smiling Eyes"></span>
+
+
+                                
+
+                                
+
+                                
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+            </div></div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1002242041142587455" class="chatlog__message-container" data-message-id="1002242041142587455">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/236596516423204865/53e194c2c694f9ec62124aa9a4e9c986.png?size=1024"  data-user-id="236596516423204865" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="encodeous#7441" data-user-id="236596516423204865" style="color: #ff6961;">encodeous</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Thursday, 28 July 2022 15:52">28-07-2022 15:52</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1002242041142587455" id="message-1002242041142587455">
+                    <span class="chatlog__markdown-preserve">:P</span>
+
+
+                    
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+            <div id="chatlog__message-container-1002242421314310225" class="chatlog__message-container" data-message-id="1002242421314310225">
+                    <div class="chatlog__message">
+
+                        <div class="chatlog__message-aside">
+                            <div class="chatlog__short-timestamp" title="Thursday, 28 July 2022 15:53">15:53</div>
+                        </div>
+
+                        <div class="chatlog__message-primary">
+                            <div class="chatlog__content chatlog__markdown" data-message-id="1002242421314310225" id="message-1002242421314310225">
+                                <span class="chatlog__markdown-preserve"><a href="https://tenor.com/view/sprinkle-gif-7550162">https://tenor.com/view/sprinkle-gif-7550162</a></span>
+
+
+                                
+
+                                
+
+                                
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+            </div>            <div id="chatlog__message-container-1002242427450560582" class="chatlog__message-container" data-message-id="1002242427450560582">
+                    <div class="chatlog__message">
+
+                        <div class="chatlog__message-aside">
+                            <div class="chatlog__short-timestamp" title="Thursday, 28 July 2022 15:53">15:53</div>
+                        </div>
+
+                        <div class="chatlog__message-primary">
+                            <div class="chatlog__content chatlog__markdown" data-message-id="1002242427450560582" id="message-1002242427450560582">
+                                <span class="chatlog__markdown-preserve">a touch of the sieve of eratosthenes and sprinkle of combinatorics</span>
+
+
+                                
+
+                                
+
+                                
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+            </div>            <div id="chatlog__message-container-1002242507876352000" class="chatlog__message-container" data-message-id="1002242507876352000">
+                    <div class="chatlog__message">
+
+                        <div class="chatlog__message-aside">
+                            <div class="chatlog__short-timestamp" title="Thursday, 28 July 2022 15:53">15:53</div>
+                        </div>
+
+                        <div class="chatlog__message-primary">
+                            <div class="chatlog__content chatlog__markdown" data-message-id="1002242507876352000" id="message-1002242507876352000">
+                                <span class="chatlog__markdown-preserve">huh why are discord gif previews broken</span>
+
+
+                                
+
+                                
+
+                                
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+            </div>            <div id="chatlog__message-container-1002242526679412776" class="chatlog__message-container" data-message-id="1002242526679412776">
+                    <div class="chatlog__message">
+
+                        <div class="chatlog__message-aside">
+                            <div class="chatlog__short-timestamp" title="Thursday, 28 July 2022 15:53">15:53</div>
+                        </div>
+
+                        <div class="chatlog__message-primary">
+                            <div class="chatlog__content chatlog__markdown" data-message-id="1002242526679412776" id="message-1002242526679412776">
+                                
+
+                                <div class=chatlog__attachment>
+    <a href=https://media.discordapp.net/attachments/1001013298906533958/1002242526016720986/unknown.png><img class=chatlog__attachment-thumbnail src=https://media.discordapp.net/attachments/1001013298906533958/1002242526016720986/unknown.png></a>
+</div>
+
+
+                                
+
+                                
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+            </div>            <div id="chatlog__message-container-1002242738382716928" class="chatlog__message-container" data-message-id="1002242738382716928">
+                    <div class="chatlog__message">
+
+                        <div class="chatlog__message-aside">
+                            <div class="chatlog__short-timestamp" title="Thursday, 28 July 2022 15:54">15:54</div>
+                        </div>
+
+                        <div class="chatlog__message-primary">
+                            <div class="chatlog__content chatlog__markdown" data-message-id="1002242738382716928" id="message-1002242738382716928">
+                                <span class="chatlog__markdown-preserve">and an adequate amount of assumptions ofc*</span>
+
+
+                                
+
+                                
+
+                                
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+            </div></div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1002244801711841280" class="chatlog__message-container" data-message-id="1002244801711841280">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                <div class='chatlog__followup-symbol'></div>
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/236596516423204865/53e194c2c694f9ec62124aa9a4e9c986.png?size=1024"  data-user-id="236596516423204865" />
+            </div>
+            <div class="chatlog__message-primary">
+                <div class="chatlog__followup">
+        <img class="chatlog__followup-avatar" src="https://cdn.discordapp.com/avatars/236596516423204865/53e194c2c694f9ec62124aa9a4e9c986.png?size=1024" alt="Avatar" loading="lazy" data-user-id="236596516423204865">
+        
+        <div class="chatlog__followup-author" style="color: #ff6961;" title="encodeous#7441" data-user-id="236596516423204865">encodeous</div>
+        <div class="chatlog__followup-content">
+            <span class="chatlog__reference-link" onclick="scrollToMessage(event, '1002210498080673792')">
+                    <em>This is an answer that Apple expects.
+<span class="pre pre-inline">c++
+#include <bits/stdc++.h>
+using namespace std;
+#define MN 100000
+struct precalc{
+&nbsp;&nbsp;&nbsp;&nbsp;int smallest_prime_factor[MN + 1];
+&nbsp;&nbsp;&nbsp;&nbsp;constexpr precalc() : smallest_prime_factor(){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 2; i <= MN; i++){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(smallest_prime_factor[i] == 0){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int j = i + i; j <= MN; j += i) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(smallest_prime_factor[j] == 0)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;smallest_prime_factor[j] = i;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+};
+static constexpr precalc spf;
+int main()
+{
+&nbsp;&nbsp;&nbsp;&nbsp;// only works when MN >= x
+
+&nbsp;&nbsp;&nbsp;&nbsp;// executing trials
+&nbsp;&nbsp;&nbsp;&nbsp;// runtime time complexity: O(logN)
+&nbsp;&nbsp;&nbsp;&nbsp;// compilation time complexity: O(NloglogN)
+&nbsp;&nbsp;&nbsp;&nbsp;auto start_time = chrono::high_resolution_clock::now();
+
+&nbsp;&nbsp;&nbsp;&nbsp;long sum = 0;
+
+&nbsp;&nbsp;&nbsp;&nbsp;for(int x = 2; x <= MN; x++){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int num = x;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int divisors = 1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(spf.smallest_prime_factor[num] != 0){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;auto spfn = spf.smallest_prime_factor[num];
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int cnt = 0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(num % spfn == 0){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cnt++;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num /= spfn;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(cnt != 0)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;divisors *= (cnt + 1);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(num != 1) divisors *= 2;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum += divisors;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+&nbsp;&nbsp;&nbsp;&nbsp;auto end_time = chrono::high_resolution_clock::now();
+&nbsp;&nbsp;&nbsp;&nbsp;auto time = end_time - start_time;
+
+&nbsp;&nbsp;&nbsp;&nbsp;cout << "sum: " << sum << " elapsed: " << chrono::duration_cast<chrono::milliseconds>(time).count() << " ms" << endl;
+}</span>
+runtime time complexity: <span class="pre pre-inline">O(logN)</span>
+compilation time complexity: <span class="pre pre-inline">O(NloglogN)</span>
+memory complexity: <span class="pre pre-inline">O(N)</span></em> 
+            </span>
+        </div>
+</div>
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="encodeous#7441" data-user-id="236596516423204865" style="color: #ff6961;">encodeous</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Thursday, 28 July 2022 16:03">28-07-2022 16:03</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1002244801711841280" id="message-1002244801711841280">
+                    <span class="chatlog__markdown-preserve">correction:
+runtime time complexity: <span class="pre pre-inline">O(logX)</span></span>
+
+
+                    
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1002267770739773551" class="chatlog__message-container" data-message-id="1002267770739773551">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                <div class='chatlog__followup-symbol'></div>
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/466047293217570817/057fa00f7378b78fc5319b676b939bdc.png?size=1024"  data-user-id="466047293217570817" />
+            </div>
+            <div class="chatlog__message-primary">
+                <div class="chatlog__followup">
+        <img class="chatlog__followup-avatar" src="https://cdn.discordapp.com/avatars/129445652215234560/3bbf39b9e6ac06eb8b4dda5d4f4837b5.png?size=1024" alt="Avatar" loading="lazy" data-user-id="129445652215234560">
+        
+        <div class="chatlog__followup-author" style="color: #3498db;" title="Ahri#5162" data-user-id="129445652215234560">Ahri</div>
+        <div class="chatlog__followup-content">
+            <span class="chatlog__reference-link" onclick="scrollToMessage(event, '1002235232235294810')">
+                    <em>What's the max time of your lifespan</em> 
+            </span>
+        </div>
+</div>
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="Litty#5861" data-user-id="466047293217570817" style="color: #FFFFFF;">Litty</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Thursday, 28 July 2022 17:34">28-07-2022 17:34</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1002267770739773551" id="message-1002267770739773551">
+                    <span class="chatlog__markdown-preserve">Apparently it can fit in a <span class="pre pre-inline">uint8_t</span>, so best case 255</span>
+
+
+                    
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1002276704426934273" class="chatlog__message-container" data-message-id="1002276704426934273">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                <div class='chatlog__followup-symbol'></div>
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/129445652215234560/3bbf39b9e6ac06eb8b4dda5d4f4837b5.png?size=1024"  data-user-id="129445652215234560" />
+            </div>
+            <div class="chatlog__message-primary">
+                <div class="chatlog__followup">
+        <img class="chatlog__followup-avatar" src="https://cdn.discordapp.com/avatars/466047293217570817/057fa00f7378b78fc5319b676b939bdc.png?size=1024" alt="Avatar" loading="lazy" data-user-id="466047293217570817">
+        
+        <div class="chatlog__followup-author" style="color: #FFFFFF;" title="Litty#5861" data-user-id="466047293217570817">Litty</div>
+        <div class="chatlog__followup-content">
+            <span class="chatlog__reference-link" onclick="scrollToMessage(event, '1002267770739773551')">
+                    <em>Apparently it can fit in a <span class="pre pre-inline">uint8_t</span>, so best case 255</em> 
+            </span>
+        </div>
+</div>
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="Ahri#5162" data-user-id="129445652215234560" style="color: #3498db;">Ahri</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Thursday, 28 July 2022 18:09">28-07-2022 18:09</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1002276704426934273" id="message-1002276704426934273">
+                    <span class="chatlog__markdown-preserve"><span class="pre pre-inline">uint8(-1)</span> IMMORTALITY</span>
+
+
+                    
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1002494131534303262" class="chatlog__message-container" data-message-id="1002494131534303262">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/624076054969188363/db494f0333273554cac9ca9b942542a5.png?size=1024"  data-user-id="624076054969188363" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="FusionSid#3645" data-user-id="624076054969188363" style="color: #f1c40f;">!Tea</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Friday, 29 July 2022 08:33">29-07-2022 08:33</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1002494131534303262" id="message-1002494131534303262">
+                    <span class="chatlog__markdown-preserve">python 
+<a href="https://pastebin.com/c4tiQxCw">https://pastebin.com/c4tiQxCw</a></span>
+
+
+                    
+
+                    <div class=chatlog__embed>
+    <div class=chatlog__embed-color-pill style=background-color:rgba(32,34,37,1)></div>
+    <div class=chatlog__embed-content-container>
+        <div class=chatlog__embed-content>
+            <div class=chatlog__embed-text>
+                
+                <div class="chatlog__embed-title">
+        <span class="markdown">haiku - Pastebin.com</span>
+</div>
+
+                <div class=chatlog__embed-description>
+    <span class="markdown preserve-whitespace">Pastebin.com is the number one paste tool since 2002. Pastebin is a website where you can store text online for a set period of time.</span>
+</div>
+                <div class="chatlog__embed-fields">
+                    
+                </div>
+
+
+                
+
+            </div>
+
+
+
+            
+
+        </div>
+
+        
+
+    </div>
+</div>
+
+
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1005044163781333003" class="chatlog__message-container" data-message-id="1005044163781333003">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/624076054969188363/db494f0333273554cac9ca9b942542a5.png?size=1024"  data-user-id="624076054969188363" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="FusionSid#3645" data-user-id="624076054969188363" style="color: #f1c40f;">!Tea</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Friday,  5 August 2022 09:26">05-08-2022 09:26</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1005044163781333003" id="message-1005044163781333003">
+                    <span class="chatlog__markdown-preserve"><a href="https://pastebin.com/VnXJnL90">https://pastebin.com/VnXJnL90</a></span>
+
+
+                    
+
+                    <div class=chatlog__embed>
+    <div class=chatlog__embed-color-pill style=background-color:rgba(32,34,37,1)></div>
+    <div class=chatlog__embed-content-container>
+        <div class=chatlog__embed-content>
+            <div class=chatlog__embed-text>
+                
+                <div class="chatlog__embed-title">
+        <span class="markdown">binary to ascii - Pastebin.com</span>
+</div>
+
+                <div class=chatlog__embed-description>
+    <span class="markdown preserve-whitespace">Pastebin.com is the number one paste tool since 2002. Pastebin is a website where you can store text online for a set period of time.</span>
+</div>
+                <div class="chatlog__embed-fields">
+                    
+                </div>
+
+
+                
+
+            </div>
+
+
+
+            
+
+        </div>
+
+        
+
+    </div>
+</div>
+
+
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1005112560237957120" class="chatlog__message-container" data-message-id="1005112560237957120">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/236596516423204865/53e194c2c694f9ec62124aa9a4e9c986.png?size=1024"  data-user-id="236596516423204865" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="encodeous#7441" data-user-id="236596516423204865" style="color: #ff6961;">encodeous</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Friday,  5 August 2022 13:58">05-08-2022 13:58</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1005112560237957120" id="message-1005112560237957120">
+                    <span class="chatlog__markdown-preserve"><div class="pre pre--multiline nohighlight">c++
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+#define gb(x, i) ((x)[i] == &#x27;1&#x27;)
+#define convert(x, offs) ( \
+(gb(x, 0 + offs) &lt;&lt; 7) | \
+(gb(x, 1 + offs) &lt;&lt; 6) | \
+(gb(x, 2 + offs) &lt;&lt; 5) | \
+(gb(x, 3 + offs) &lt;&lt; 4) | \
+(gb(x, 4 + offs) &lt;&lt; 3) | \
+(gb(x, 5 + offs) &lt;&lt; 2) | \
+(gb(x, 6 + offs) &lt;&lt; 1) | \
+(gb(x, 7 + offs) &lt;&lt; 0) \
+)
+string binaryConversion(const string&amp; input){
+&nbsp;&nbsp;&nbsp;&nbsp;string strv = &quot;&quot;;
+&nbsp;&nbsp;&nbsp;&nbsp;int sz = input.length() / 8;
+&nbsp;&nbsp;&nbsp;&nbsp;strv.reserve(sz);
+&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; sz; i++){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strv += (char)(convert(input, i * 8));
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;return strv;
+}
+int main()
+{
+&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; binaryConversion(&quot;010010010010000001101100011011110111011001100101001000000101010001100101011100110110100000100001&quot;) &lt;&lt; &#x27;\n&#x27;;
+&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; binaryConversion(&quot;001100010011001000110001001100110011000100110111&quot;) &lt;&lt; &#x27;\n&#x27;;
+&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; binaryConversion(&quot;010000010110110101100001011110100110100101101110011001110010000001000101011001000110000101100010011010010111010000100001&quot;) &lt;&lt; &#x27;\n&#x27;;
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;
+}</div>
+macros are great.
+challenge #1</span>
+<span class="chatlog__reference-edited-timestamp" title="Friday,  5 August 2022 14:15">(edited)</span>
+
+                    <div class=chatlog__attachment>
+    <a href=https://media.discordapp.net/attachments/1001013298906533958/1005112559482966036/unknown.png><img class=chatlog__attachment-thumbnail src=https://media.discordapp.net/attachments/1001013298906533958/1005112559482966036/unknown.png></a>
+</div>
+
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div id="chatlog__message-container-1005116868018847824" class="chatlog__message-container" data-message-id="1005116868018847824">
+        <div class="chatlog__message">
+            <div class="chatlog__message-aside">
+                
+                <img class="chatlog__avatar" src="https://cdn.discordapp.com/avatars/236596516423204865/53e194c2c694f9ec62124aa9a4e9c986.png?size=1024"  data-user-id="236596516423204865" />
+            </div>
+            <div class="chatlog__message-primary">
+                
+                <div class="chatlog__header">
+                    <span class="chatlog__author-name" title="encodeous#7441" data-user-id="236596516423204865" style="color: #ff6961;">encodeous</span>
+                    
+                    <span class="chatlog__timestamp" data-timestamp="Friday,  5 August 2022 14:15">05-08-2022 14:15</span>
+                </div>
+
+                <div class="chatlog__content chatlog__markdown" data-message-id="1005116868018847824" id="message-1005116868018847824">
+                    <span class="chatlog__markdown-preserve"><div class="pre pre--multiline nohighlight">c++
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+unordered_map&lt;int, int&gt; dsu;
+unordered_map&lt;int, int&gt; dsu_sz;
+int mv = 0;
+bool hasp(int x){
+&nbsp;&nbsp;&nbsp;&nbsp;return dsu.count(x);
+}
+int findp(int x){
+&nbsp;&nbsp;&nbsp;&nbsp;if(dsu.count(x) == 0){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dsu[x] = x;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dsu_sz[x] = 1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return x;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;if(dsu[x] == x) return x;
+&nbsp;&nbsp;&nbsp;&nbsp;return dsu[x] = findp(dsu[x]);
+}
+void merge(int x, int y){
+&nbsp;&nbsp;&nbsp;&nbsp;x = findp(x);
+&nbsp;&nbsp;&nbsp;&nbsp;y = findp(y);
+&nbsp;&nbsp;&nbsp;&nbsp;if(x != y){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dsu_sz[x] += dsu_sz[y];
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mv = max(mv, dsu_sz[x]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dsu[y] = x;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+int solve(vector&lt;int&gt;&amp; input){
+&nbsp;&nbsp;&nbsp;&nbsp;mv = 0;
+&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; input.size(); i++){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int x = input[i];
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;findp(x);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(hasp(x-1)){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;merge(x-1, x);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(hasp(x+1)){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;merge(x+1, x);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;dsu.clear();
+&nbsp;&nbsp;&nbsp;&nbsp;dsu_sz.clear();
+&nbsp;&nbsp;&nbsp;&nbsp;return mv;
+}
+int main()
+{
+&nbsp;&nbsp;&nbsp;&nbsp;vector&lt;int&gt; v = {100, 4, 200, 1, 3, 2};
+&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; solve(v);
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;
+}</div>
+challenge #2</span>
+<span class="chatlog__reference-edited-timestamp" title="Friday,  5 August 2022 14:15">(edited)</span>
+
+                    
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+<div class="footer">
+    <span class="footer__text">This transcript was generated on  3 June 2023 at 19:37:39 (UTC)</span>
+</div>
+
+<div id="context-menu">
+    <div class="item">Copy Message ID</div>
+</div>
+
+<div id="summary-popout" class="summary-popout">
+    <div class="meta__header">
+         <img src="https://cdn.discordapp.com/icons/959104657089781770/58d502c4a17b94b7353b208c4c31d6a6.png?size=1024" alt="Avatar">
+    </div>
+    <div class="meta__description">
+        <div class="meta__details">
+            <div class="meta__user">Code Cave</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Guild ID</div>
+            <div class="meta__value">959104657089781770</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Channel ID</div>
+            <div class="meta__value">1001013298906533958</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Channel Creation Date</div>
+            <div class="meta__value">Jul 25, 2022 (06:29:28)</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Total Message Count</div>
+            <div class="meta__value">33</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Total Message Participants</div>
+            <div class="meta__value">9</div>
+        </div>
+        <div class="meta__support">    <a href="https://ko-fi.com/mahtoid">DONATE</a></div>
+    </div>
+</div>
+
+<div id="meta-popout-225454058322919425" class="meta-popout">
+    <div class="meta__header">
+         <img src="https://cdn.discordapp.com/avatars/225454058322919425/0894087026df9832ca33748c33f5540a.png?size=1024" alt="Avatar">
+    </div>
+    <div class="meta__description">
+        
+        <div class="meta__details">
+            <div class="meta__user">DimDim</div>
+            <div class="meta__discriminator">#1337</div>
+            
+        </div>
+        <div class="meta__divider-2"></div>
+        <div class="meta__field">
+            <div class="meta__title">Member Since</div>
+            <div class="meta__value"><img src="https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/discord-logo.svg"/> Sep 14, 2016 <div class="meta__divider"></div> <img src="https://cdn.discordapp.com/icons/959104657089781770/58d502c4a17b94b7353b208c4c31d6a6.png?size=1024" class="meta__img-border"/> Jun 03, 2022</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Member ID</div>
+            <div class="meta__value">225454058322919425</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Message Count</div>
+            <div class="meta__value">1</div>
+        </div>
+    </div>
+</div>
+
+<div id="meta-popout-624076054969188363" class="meta-popout">
+    <div class="meta__header">
+         <img src="https://cdn.discordapp.com/avatars/624076054969188363/db494f0333273554cac9ca9b942542a5.png?size=1024" alt="Avatar">
+    </div>
+    <div class="meta__description">
+        <div class="meta__display-name">!Tea</div>
+        <div class="meta__details">
+            <div class="meta__user">FusionSid</div>
+            <div class="meta__discriminator">#3645</div>
+            
+        </div>
+        <div class="meta__divider-2"></div>
+        <div class="meta__field">
+            <div class="meta__title">Member Since</div>
+            <div class="meta__value"><img src="https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/discord-logo.svg"/> Sep 19, 2019 <div class="meta__divider"></div> <img src="https://cdn.discordapp.com/icons/959104657089781770/58d502c4a17b94b7353b208c4c31d6a6.png?size=1024" class="meta__img-border"/> Mar 31, 2022</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Member ID</div>
+            <div class="meta__value">624076054969188363</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Message Count</div>
+            <div class="meta__value">3</div>
+        </div>
+    </div>
+</div>
+
+<div id="meta-popout-320426328216305665" class="meta-popout">
+    <div class="meta__header">
+         <img src="https://cdn.discordapp.com/avatars/320426328216305665/f517b76b235f1dfb545930808f0b76a7.png?size=1024" alt="Avatar">
+    </div>
+    <div class="meta__description">
+        <div class="meta__display-name">UndeadViking</div>
+        <div class="meta__details">
+            <div class="meta__user">Viking</div>
+            <div class="meta__discriminator">#9320</div>
+            
+        </div>
+        <div class="meta__divider-2"></div>
+        <div class="meta__field">
+            <div class="meta__title">Member Since</div>
+            <div class="meta__value"><img src="https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/discord-logo.svg"/> Jun 03, 2017 <div class="meta__divider"></div> <img src="https://cdn.discordapp.com/icons/959104657089781770/58d502c4a17b94b7353b208c4c31d6a6.png?size=1024" class="meta__img-border"/> Jul 13, 2022</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Member ID</div>
+            <div class="meta__value">320426328216305665</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Message Count</div>
+            <div class="meta__value">2</div>
+        </div>
+    </div>
+</div>
+
+<div id="meta-popout-262703675967799297" class="meta-popout">
+    <div class="meta__header">
+         <img src="https://cdn.discordapp.com/avatars/262703675967799297/ec576fae966223565ebe9e3d17fb52b0.png?size=1024" alt="Avatar">
+    </div>
+    <div class="meta__description">
+        <div class="meta__display-name">Bearded__Emperor__Spider__senpai</div>
+        <div class="meta__details">
+            <div class="meta__user">Spiderboydk</div>
+            <div class="meta__discriminator">#8759</div>
+            
+        </div>
+        <div class="meta__divider-2"></div>
+        <div class="meta__field">
+            <div class="meta__title">Member Since</div>
+            <div class="meta__value"><img src="https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/discord-logo.svg"/> Dec 25, 2016 <div class="meta__divider"></div> <img src="https://cdn.discordapp.com/icons/959104657089781770/58d502c4a17b94b7353b208c4c31d6a6.png?size=1024" class="meta__img-border"/> Jul 18, 2022</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Member ID</div>
+            <div class="meta__value">262703675967799297</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Message Count</div>
+            <div class="meta__value">3</div>
+        </div>
+    </div>
+</div>
+
+<div id="meta-popout-236596516423204865" class="meta-popout">
+    <div class="meta__header">
+         <img src="https://cdn.discordapp.com/avatars/236596516423204865/53e194c2c694f9ec62124aa9a4e9c986.png?size=1024" alt="Avatar">
+    </div>
+    <div class="meta__description">
+        
+        <div class="meta__details">
+            <div class="meta__user">encodeous</div>
+            <div class="meta__discriminator">#7441</div>
+            
+        </div>
+        <div class="meta__divider-2"></div>
+        <div class="meta__field">
+            <div class="meta__title">Member Since</div>
+            <div class="meta__value"><img src="https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/discord-logo.svg"/> Oct 14, 2016 <div class="meta__divider"></div> <img src="https://cdn.discordapp.com/icons/959104657089781770/58d502c4a17b94b7353b208c4c31d6a6.png?size=1024" class="meta__img-border"/> Apr 03, 2022</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Member ID</div>
+            <div class="meta__value">236596516423204865</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Message Count</div>
+            <div class="meta__value">14</div>
+        </div>
+    </div>
+</div>
+
+<div id="meta-popout-129445652215234560" class="meta-popout">
+    <div class="meta__header">
+         <img src="https://cdn.discordapp.com/avatars/129445652215234560/3bbf39b9e6ac06eb8b4dda5d4f4837b5.png?size=1024" alt="Avatar">
+    </div>
+    <div class="meta__description">
+        
+        <div class="meta__details">
+            <div class="meta__user">Ahri</div>
+            <div class="meta__discriminator">#5162</div>
+            
+        </div>
+        <div class="meta__divider-2"></div>
+        <div class="meta__field">
+            <div class="meta__title">Member Since</div>
+            <div class="meta__value"><img src="https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/discord-logo.svg"/> Dec 24, 2015 <div class="meta__divider"></div> <img src="https://cdn.discordapp.com/icons/959104657089781770/58d502c4a17b94b7353b208c4c31d6a6.png?size=1024" class="meta__img-border"/> Jul 27, 2022</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Member ID</div>
+            <div class="meta__value">129445652215234560</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Message Count</div>
+            <div class="meta__value">3</div>
+        </div>
+    </div>
+</div>
+
+<div id="meta-popout-466047293217570817" class="meta-popout">
+    <div class="meta__header">
+         <img src="https://cdn.discordapp.com/avatars/466047293217570817/057fa00f7378b78fc5319b676b939bdc.png?size=1024" alt="Avatar">
+    </div>
+    <div class="meta__description">
+        
+        <div class="meta__details">
+            <div class="meta__user">Litty</div>
+            <div class="meta__discriminator">#5861</div>
+            
+        </div>
+        <div class="meta__divider-2"></div>
+        <div class="meta__field">
+            <div class="meta__title">Member Since</div>
+            <div class="meta__value"><img src="https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/discord-logo.svg"/> Jul 10, 2018 <div class="meta__divider"></div> <img src="https://cdn.discordapp.com/icons/959104657089781770/58d502c4a17b94b7353b208c4c31d6a6.png?size=1024" class="meta__img-border"/> Unknown</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Member ID</div>
+            <div class="meta__value">466047293217570817</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Message Count</div>
+            <div class="meta__value">5</div>
+        </div>
+    </div>
+</div>
+
+<div id="meta-popout-624029883626029066" class="meta-popout">
+    <div class="meta__header">
+         <img src="https://cdn.discordapp.com/avatars/624029883626029066/ae4d01c6d6c5cb128d7e5b89fcae7f37.png?size=1024" alt="Avatar">
+    </div>
+    <div class="meta__description">
+        <div class="meta__display-name">i use arch btw</div>
+        <div class="meta__details">
+            <div class="meta__user">ʇɐʎɐᴚ ʌnɹɥᗡ</div>
+            <div class="meta__discriminator">#2867</div>
+            
+        </div>
+        <div class="meta__divider-2"></div>
+        <div class="meta__field">
+            <div class="meta__title">Member Since</div>
+            <div class="meta__value"><img src="https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/discord-logo.svg"/> Sep 18, 2019 <div class="meta__divider"></div> <img src="https://cdn.discordapp.com/icons/959104657089781770/58d502c4a17b94b7353b208c4c31d6a6.png?size=1024" class="meta__img-border"/> Apr 30, 2022</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Member ID</div>
+            <div class="meta__value">624029883626029066</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Message Count</div>
+            <div class="meta__value">1</div>
+        </div>
+    </div>
+</div>
+
+<div id="meta-popout-332990813195993092" class="meta-popout">
+    <div class="meta__header">
+         <img src="https://cdn.discordapp.com/avatars/332990813195993092/a4839e66b6806492c96c03ade814f6e2.png?size=1024" alt="Avatar">
+    </div>
+    <div class="meta__description">
+        
+        <div class="meta__details">
+            <div class="meta__user">EpicPix</div>
+            <div class="meta__discriminator">#5959</div>
+            
+        </div>
+        <div class="meta__divider-2"></div>
+        <div class="meta__field">
+            <div class="meta__title">Member Since</div>
+            <div class="meta__value"><img src="https://cdn.jsdelivr.net/gh/mahtoid/DiscordUtils@master/discord-logo.svg"/> Jul 07, 2017 <div class="meta__divider"></div> <img src="https://cdn.discordapp.com/icons/959104657089781770/58d502c4a17b94b7353b208c4c31d6a6.png?size=1024" class="meta__img-border"/> May 09, 2023</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Member ID</div>
+            <div class="meta__value">332990813195993092</div>
+        </div>
+        <div class="meta__field">
+            <div class="meta__title">Message Count</div>
+            <div class="meta__value">1</div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    <!-- Right Click - Copy ID -->
+    let metaPopout = undefined
+    const contextMenu = document.getElementById("context-menu");
+    const scope = document.querySelector("body");
+    const messages = document.getElementsByClassName("chatlog__message-container")
+    let messageID = ""
+    const normalisePosition = (mouseX, mouseY, type) => {
+        if (type == "context") {
+            maxWidth = contextMenu.clientWidth
+            maxHeight = contextMenu.clientHeight
+        } else if (type == "user") {
+            maxWidth = metaPopout.clientWidth
+            maxHeight = metaPopout.clientHeight
+        }
+
+        let {
+            left: scopeOffsetX,
+            top: scopeOffsetY,
+        } = scope.getBoundingClientRect()
+        scopeOffsetX = scopeOffsetX < 0 ? 0 : scopeOffsetX;
+        scopeOffsetY = scopeOffsetY < 0 ? 0 : scopeOffsetY
+        const scopeX = mouseX - scopeOffsetX;
+        const scopeY = mouseY - scopeOffsetY
+
+        const outOfBoundsOnX = scopeX + maxWidth > scope.clientWidth
+        const outOfBoundsOnY = scopeY + maxHeight > scope.clientHeight
+        let normalizedX = mouseX;
+        let normalizedY = mouseY
+
+        if (outOfBoundsOnX) {
+            normalizedX = scopeOffsetX + scope.clientWidth - maxWidth;
+        }
+
+        if (outOfBoundsOnY) {
+            normalizedY = scopeOffsetY + scope.clientHeight - maxHeight;
+        }
+
+        return { normalizedX, normalizedY };
+    }
+
+    scope.addEventListener("contextmenu", (e) => {
+        event.preventDefault()
+        if (e.target.offsetParent != contextMenu) {
+          contextMenu.classList.remove("visible");
+        }
+    })
+
+    var openContextMenu = function() {
+        const { clientX: mouseX, clientY: mouseY } = event
+        const { normalizedX, normalizedY } = normalisePosition(mouseX, mouseY, "context")
+
+        contextMenu.classList.remove("visible")
+        contextMenu.style.left = `${normalizedX}px`;
+        contextMenu.style.top = `${normalizedY}px`
+
+        setTimeout(() => {
+            contextMenu.classList.add("visible");
+        })
+        messageID = this.getAttribute("data-message-id");
+    }
+
+    for (var i = 0; i < messages.length; i++) {
+        messages[i].addEventListener("contextmenu", openContextMenu)
+    }
+
+    scope.addEventListener("click", (e) => {
+        if (e.target.offsetParent != contextMenu) {
+          contextMenu.classList.remove("visible");
+        } else {
+            navigator.clipboard.writeText(messageID)
+            contextMenu.classList.remove("visible");
+        }
+
+        if (metaPopout && e.target.offsetParent != metaPopout) {
+            metaPopout.classList.remove("mounted")
+        }
+
+        if (e.target.offsetParent != summaryPopout) {
+            summaryPopout.classList.remove("visible")
+        }
+    })
+
+    mainScroll = document.querySelector('.main')
+    mainScroll.addEventListener('scroll', (e) => {
+        if (e.target.offsetParent != contextMenu) {
+            contextMenu.classList.remove("visible");
+        } else {
+            navigator.clipboard.writeText(messageID)
+            contextMenu.classList.remove("visible");
+        }
+
+        if (metaPopout && e.target.offsetParent != metaPopout) {
+            metaPopout.classList.remove("mounted")
+        }
+    });
+
+    <!-- User Dialog -->
+    const summaryPopout = document.getElementById('summary-popout')
+
+    window.onload = function() {
+        var author_name = document.getElementsByClassName('chatlog__author-name');
+        var followup_author =document.getElementsByClassName('chatlog__followup-author');
+        var followup_avatar = document.getElementsByClassName("chatlog__followup-avatar");
+        var avatar = document.getElementsByClassName("chatlog__avatar");
+        const element_select = [...author_name, ...followup_author, ...followup_avatar, ...avatar]
+
+        for(var i = 0; i < element_select.length; i++) {
+            var element = element_select[i];
+            element.onclick = function() {
+                authorID = this.getAttribute("data-user-id");
+
+                if (metaPopout) {
+                    metaPopout.classList.remove('mounted');
+                }
+
+                metaPopout = document.getElementById('meta-popout-' + authorID);
+
+                const subtractX = document.querySelector('.main').scrollLeft
+                const subtractY = document.querySelector('.main').scrollTop
+
+                const elementX = this.offsetLeft + this.offsetWidth + 10 - subtractX
+                const elementY = this.offsetTop - subtractY
+
+                const { normalizedX, normalizedY } = normalisePosition(elementX, elementY, "user")
+
+                metaPopout.style.left = `${normalizedX}px`;
+                metaPopout.style.top = `${normalizedY}px`;
+
+                setTimeout(() => {
+                    metaPopout.classList.add("mounted")
+                });
+            }
+        }
+
+        var summaryButton = document.getElementById('summary-button');
+        summaryButton.onclick = function() {
+            const elementX = this.offsetLeft - 110
+            const elementY = this.offsetTop + 30
+
+            summaryPopout.style.left = `${elementX}px`;
+            summaryPopout.style.top = `${elementY}px`;
+
+            setTimeout(() => {
+                summaryPopout.classList.add("visible")
+            });
+        }
+    }
+
+    <!-- Timestamps: Tooltips -->
+    tippy('.chatlog__timestamp', {
+        placement: 'top',
+        animation: 'fade',
+        content: (reference) => reference.getAttribute('data-timestamp'),
+        theme: 'disc',
+    });
+
+    <!-- Timestamps: Tooltips -->
+    tippy('.unix-timestamp', {
+        placement: 'top',
+        animation: 'fade',
+        content: (reference) => reference.getAttribute('data-timestamp'),
+        theme: 'disc',
+    });
+
+    <!-- Timestamps: Content -->
+dayjs.extend(window.dayjs_plugin_utc);
+dayjs.extend(window.dayjs_plugin_timezone);
+dayjs.extend(window.dayjs_plugin_customParseFormat);
+dayjs.extend(window.dayjs_plugin_isToday);
+dayjs.extend(window.dayjs_plugin_isTomorrow);
+dayjs.extend(window.dayjs_plugin_isBetween);
+
+dayjs.tz.setDefault("UTC")
+dayjs().format("DD/MM/YYYY HH:mm");
+var timeStamps = document.getElementsByClassName('chatlog__timestamp');
+for(var i = 0; i < timeStamps.length; i++) {
+    const date_1 = dayjs.tz(timeStamps[i].innerText, "DD-MM-YYYY HH:mm", "UTC");
+    const date_2 = dayjs.tz();
+    const diff = date_2.diff(date_1, 'day', true)
+
+    if (date_1.isTomorrow()) {
+        timeStamps[i].ineerText = "Tomorrow at " + date_1.format('HH:mm')
+    } else if (date_1.isToday()) {
+        timeStamps[i].innerText = "Today at " + date_1.format('HH:mm')
+    } else if (date_1.add(1, 'day').isToday()) {
+        timeStamps[i].innerText = "Yesterday at " + date_1.format('HH:mm')
+    } else if (date_1.isBetween(date_2, date_2.subtract(7, 'day'))) {
+        timeStamps[i].innerText = date_1.day(date_1.day()).format("dddd [at] HH:mm")
+    }
+}
+</script>
+
+</body>
+</html>
